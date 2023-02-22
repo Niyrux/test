@@ -1,0 +1,362 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Raleway&family=Shrikhand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Raleway&family=Roboto:ital@1&family=Shrikhand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto';
+
+}
+
+/*   header   */
+
+header {
+    display: flex;
+    align-items: center;
+}
+
+header div {
+    width: 30%;
+    padding: 0 0 0 20px;
+}
+
+header h1 {
+    width: 70%;
+    font-size: 30px;
+    font-weight: 400;
+    font-family: 'Shrikhand';
+    font-style: italic;
+    margin: 10px 0;
+}
+
+/*   fin   */
+
+/*   section-1   */
+
+.presentation img{
+    min-height: 375px;
+    object-fit: cover;
+    width: 100%;
+    z-index: -1;
+}
+
+
+
+/*   fin   */
+
+/*   section 2   */
+
+.contenu {
+    border-radius: 25px 25px 0 0 ;
+    margin-top: -75px;
+    background-color: #F7F7F7;
+    padding: 30px 10px ;
+    z-index: 2;
+    position: relative;
+}
+
+.header-contenu {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px 0 0;
+    font-family: 'Shrikhand';
+    font-weight: 400;
+    font-style: italic;
+}
+
+.header-contenu img {
+    object-fit: contain;
+    transition: all ease .3s;
+    width: inherit;
+    height: inherit;
+}
+
+
+.header-contenu img:hover {
+    content: url(../images/heart-full.png);
+    transition: opacity 0.5s ease;
+    width: inherit;
+    height: inherit;
+}
+.contenu h3{
+    position: relative;
+    width: fit-content;
+    text-transform: uppercase;
+    padding-bottom: 5px;
+    font-family: 'Roboto';
+    font-weight: 300;
+    font-size: 16px;
+}
+.contenu .plats {
+    margin-left: 50px;
+}
+.contenu h3::after {
+    width: 50%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: '';
+    height: 2px;
+    background-color: #99E2D0;
+}
+/*   fin   */
+
+/*   card-container   */
+
+.card-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: white;
+    margin-bottom: 30px;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
+    font-family: 'Roboto';
+}
+
+.card-container .prix {
+    display: flex;
+    align-items: flex-end;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.card-container h4 , .card-container p {
+    margin:5px 0;
+}
+
+.card-container h4 {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.card-container p  {
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.button button {
+    background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+    padding: 13px 16px;
+    width: 50%;
+    color: white;
+    border: none;
+    font-family:'Roboto' ;
+    font-weight: 500;
+    font-size: 16px;
+    transition: all ease .3s;
+}
+
+.button button:hover {
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
+    transition: all ease .3s;
+}
+
+
+/*   footer   */
+
+footer {
+    background-color: #353535;
+
+}
+
+.footer {
+    width: 90%;
+    margin: auto;
+    padding-bottom: 20px;
+}
+
+footer h3 {
+    font-family: 'Shrikhand';
+    color: white;
+    font-style: italic;
+    font-size: 18px;
+    margin: 0;
+    padding: 5px 0;
+    font-weight: 400;
+}
+
+.logo {
+    display: flex ;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.logo img {
+    object-fit: contain;
+}
+
+.footer p {
+    margin: 5px;
+    color: white;
+}
+
+/** animation **/
+
+.heart-hidden {
+    position: absolute;
+    opacity: 0;
+}
+
+.heart:active .heart-visible {
+    opacity: 0;
+}
+
+.heart:active .heart-hidden{
+    opacity: 1;
+    transition: ease all .3s;
+}
+
+.heart-visible {
+    position: relative;
+}
+
+.heart {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+
+.div-hide {
+    background-color: #99E2D0;
+    margin: -15px;
+    border-radius: 0 15px 15px 0;
+    display: flex;
+    transition: all ease .3s;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    width: 0;
+}
+.div-hide img {
+    object-fit: scale-down;
+}
+
+.card-container:hover .div-hide {
+    visibility: visible;
+    width: 15%;
+    transition: all ease .3s;
+}
+
+.card-visible {
+    width: 100%;
+    display: flex;
+    transition: all ease .3s;
+    justify-content: space-between;
+}
+
+.card-container:hover .card-visible {
+    width: 85%;
+    transition: all ease .3s;
+}
+
+.entrer .card-container{
+    animation: fadein 3s;
+}
+
+.middle .card-container{
+    animation: fadein 5s;
+}
+
+.desserts .card-container{
+    animation: fadein 8s;
+}
+
+
+.card-container .card-visible .hoverflow, .card-container .card-visible .hoverflow p , .card-container .card-visible .hoverflow h4 {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+
+@media screen and (min-width:768px){
+ .contenu {
+    width: 70%;
+    margin: -75px auto 0 auto;
+ }
+ .header-contenu {
+    justify-content: center;
+    gap: 30px;
+ }
+
+ .entrer, .middle, .desserts {
+    width: 70%;
+    margin: auto;
+}
+
+h3.plats {
+    margin-left: 0 !important;
+}
+
+.button button {
+    width: 20%;
+}
+
+.footer {
+    display: flex;
+    padding: 50px 0;
+    justify-content: end;
+    text-align: end;
+    align-items: center;
+    gap: 50px;
+}
+
+.footer img {
+    object-fit: scale-down;
+}
+.footer h3 {
+    order: 5;
+}
+
+.footer p {
+    margin:0;
+}
+
+.footer .logo p {
+    width:  fit-content;
+}
+
+.footer .logo {
+    justify-content: end;
+}
+#delice .presentation  img{
+    content: url('../images/delice-pc.png');
+    max-height: 423px;
+}
+#francaise .presentation  img{
+    content: url('../images/francais-pc.png') ;
+    max-height: 423px;
+}
+#enchanter .presentation  img{
+    content: url('../images/note-pc.png') ;
+    max-height: 423px;
+}
+#palette .presentation  img{
+    content: url('../images/palette-gout-pc.png') ;
+    max-height: 423px;
+}
+}
+
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+
+
+}
